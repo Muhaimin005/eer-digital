@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="{{'/favicon.ico' | prepend: site.baseurl}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>{{ page.title }} - {{ site.title }}</title>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})
+        (window,document,'script','dataLayer','GTM-5BRJQ75F');
+    </script>
+    <!-- End Google Tag Manager -->
+  <link rel="stylesheet" href="{{'/assets/css/style.css' | relative_url }}">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BRJQ75F"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header>
+        <!-- First Row -->
+        <div class="top-bar">
+        <nav>
+            <ul>
+            <li><a href="/insight">Insight</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/contact"></a></li>
+            </ul>
+        </nav>
+        </div>
+
+        <!-- Second Row -->
+        <div class="main-nav">
+        <div class="logo">
+            <a href="/"><img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Company Logo"></a>
+        </div>
+        <nav>
+            <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/business-segments">Business Segment</a></li>
+            <li><a href="/industries">Industries</a></li>
+            <li><a href="/solutions">Solutions</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main>
+      {{ content }}
+    </main>
+
+        <!-- Footer -->
+   <footer>
+    <!-- First Layer -->
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="/solutions/artificial-intelligence">Artificial Intelligence</a></li>
+          <li><a href="/solutions/digital-technology">Digital Technology</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="/industries/defense">Defense</a></li>
+          <li><a href="/industries/healthcare">Healthcare</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect With Us</h4>
+        <p>123 Business Street, Kuala Lumpur, Malaysia</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank">FB</a>
+          <a href="https://twitter.com" target="_blank">TW</a>
+          <a href="https://linkedin.com" target="_blank">IN</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>&nbsp;</h4>
+        <p><!-- you can leave this empty or use for newsletter later --></p>
+      </div>
+    </div>
+
+    <!-- Second Layer -->
+    <div class="footer-bottom">
+      <p>&copy; {{ site.title }} {{ "now" | date: "%Y" }}</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">↑</div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script>
+        // Initialize EmailJS with your Public Key
+        (function() {
+            emailjs.init("oWfKA67MaOFS2bqyK"); // Replace with your actual public key
+        })();
+    </script>
+    <!-- JavaScript -->
+    {% if page.js %}
+    <script src="{{ '/assets/js/' | append: page.js | relative_url }}"></script>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+header .top-bar {
+  background-color: #e26b07;
+  color: #fff;
+  padding: 0.5em;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+}
+
+header .top-bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .top-bar li {
+  display: inline-block;
+  margin-left: 1.5em;
+}
+
+header .top-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  top: 30px;
+  width: 98%;
+  background: #fff;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+header .main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .main-nav li {
+  display: inline-block;
+  margin-left: 1.5em;
+}
+
+header .main-nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Base logo size */
+.logo img {
+  height: 60px; /* control with height instead of font-size since it’s an image */
+  transition: height 0.3s ease;
+}
+
+/* When scrolled */
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  height: 70px; /* shrink header height */
+}
+
+header.scrolled .logo img {
+  height: 40px; /* shrink logo when scrolled */
+}
+
+main {
+  flex: 1;
+  padding-top: 240px; 
+}
+
+footer .footer-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  background: #f5f5f5;
+  padding: 2em;
+}
+
+footer .footer-top h4 {
+  margin-bottom: 0.5em;
+}
+
+footer .footer-top ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-top a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer .social-icons a {
+  margin-right: 0.5em;
+  text-decoration: none;
+}
+
+footer .footer-bottom {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+}
+
+footer
+{
+  margin-top: auto;
+}
