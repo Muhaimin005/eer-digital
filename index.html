@@ -34,14 +34,14 @@ css : main.css
             <!-- Row 1 -->
             <div class="his-row his-row-white reveal-left">
                 <div class="his-col his-image">
-                    <img src="{{'/assets/image/asian-female-doctor-looking-patient-s-skull-x-ray-tablet-office.jpg'| relative_url }}" alt="Patient Management">
+                    <img src="{{'/assets/images/main-pic-1.jpg'| relative_url }}" alt="Patient Management">
                 </div>
                 <div class="his-col his-text">
                     <h3>Who are we?</h3>
-                    <p>EER Digital isa dedicated team of digital solution provider for your business needs.
+                    <p>EER Digital is a dedicated team of digital solution provider for your business needs.
                       We harness the power of cutting-edge technologies to help public sector organizations 
                       and businesses build strong digital foundations and stay ahead in a fast-evolving world.</p>
-                    <p>We empower ambitious start-ups and enterprises to scale, \
+                    <p>We empower ambitious start-ups and enterprises to scale,
                       enhance their value, and shape a sustainable digital future through tailored technology solutions.</p>
                     <br>
                     <a href="" class="his-btn-primary">Learn More</a>
@@ -51,53 +51,37 @@ css : main.css
             <!-- Row 2 -->
             <div class="his-row his-row-red reveal-right">
                 <div class="his-col his-text">
-                    <h3>Our Solutions</h3>
-                    <p>From AI-driven workflows to secure financial systems, our comprehensive solutions are built to perform and scale.</p>
+                    <h3>What we do best </h3>
+                    <p>We are dedicated to help our client embrace the Digital era we help businesses unlock opportunities through digital transformation. Our Core Strength lies in our : </p>
                     <ul class="his-features">
-                        <li style="color:#fff;">Artificial Intelligence — Automate document processing and unlock data insights. </li>
-                        <li style="color:#fff;">FSI Accounting — Streamline billing, ensure compliance, and modernize reporting.</li>
-                        <li style="color:#fff;">Data Analytic — Turn data into actionable intelligence for smarter policies.</</li>
+                        <li style="color:#fff;"><b style="color: maroon;">Consulting & Strategy</b><br> We identify opportunities and build your digital roadmap.</li>
+                        <li style="color:#fff;"><b style="color: maroon;">Implementation & Integration</b><br> Bringing your solutions to life with scalable architectures.</li>
+                        <li style="color:#fff;"><b style="color: maroon;">Support & Optimization</b><br> Where we maintain, enhance, and future-proof your operations.</li>
                     </ul>
                 </div>
                 <div class="his-col his-image">
-                    <img src="{{'/assets/image/discussing-financial-reports.jpg'| relative_url }}" alt="Clinical Analytics">
+                    <img src="{{'/assets/images/main-pic-2.jpg'| relative_url }}" alt="Clinical Analytics">
                 </div>
             </div>
 
             <!-- Row 3 -->
             <div class="his-row his-row-white reveal-left">
                 <div class="his-col his-image">
-                    <img src="{{'/assets/image/hr-staff-member-reviewing-candidate-asking-questions-about-qualifications.jpg'| relative_url }}" alt="Billing System">
+                    <img src="{{'/assets/images/main-pic-3.jpg'| relative_url }}" alt="Billing System">
                 </div>
                 <div class="his-col his-text">
-                    <h3>Billing System</h3>
-                    <p>Built-in billing function that streamlines financial processes, enabling accurate calculation of asset losses and ensuring transparent reporting.</p>
+                    <h3>Our Solutions</h3>
+                    <p>From AI-driven workflows to secure financial systems, our comprehensive solutions are built to perform and scale.</p>
                     <ul class="his-features">
-                        <li>Loss calculation with detailed breakdowns</li>
-                        <li>Audit Trail to maintain compliance and accountability</li>
-                        <li>Customizable Billing Rules for flexible operations</li>
+                        <li><b>Artificial Intelligence</b><br>Automate document processing and unlock data insights.</li>
+                        <li><b>FSI Accounting</b><br>Streamline billing, ensure compliance, and modernize reporting.</li>
+                        <li><b>Data Analytic</b><br>Turn data into actionable intelligence for smarter policies.</li>
                     </ul>
                 </div>
             </div>
             </div>
         </div>
     </section>
-
-<section class="services">
-  <div class="container">
-    <h2>Business Segments</h2>
-    <div class="cards-grid">
-      {% for seg in site.data.business_segments %}
-      <div class="card">
-        <img src="{{ seg.icon }}" alt="{{ seg.title }}">
-        <h3>{{ seg.title }}</h3>
-        <p>{{ seg.description }}</p>
-        <a href="{{ seg.url }}">Learn More →</a>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
 
 <section class="industries">
   <div class="container">
@@ -115,39 +99,6 @@ css : main.css
   </div>
 </section>
 
-<section class="solutions-highlight">
-  <div class="container">
-    <h2>Key Solutions</h2>
-    <div class="cards-grid">
-      {% for sol in site.data.solutions %}
-      <div class="card">
-        <h3>{{ sol.title }}</h3>
-        <p>{{ sol.short }}</p>
-        <a href="{{ sol.url }}">Discover More →</a>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="news-insights">
-  <div class="container">
-    <h2>Latest Insights</h2>
-    <div class="news-grid">
-      {% for post in site.news limit:3 %}
-      <div class="news-card">
-        {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.title }}">
-        {% endif %}
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <small>{{ post.date | date: "%b %-d, %Y" }}</small>
-        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
-      </div>
-      {% endfor %}
-    </div>
-    <p><a href="/news" class="btn-secondary">View All News & Insights</a></p>
-  </div>
-</section>
 
 <section class="sustainability">
   <div class="container">

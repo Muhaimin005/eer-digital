@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 101vh;
+  height: 103vh;
   overflow: hidden;
   background: linear-gradient(135deg, #fff 0%, #f4f4f4 100%);
   display: flex;
@@ -121,27 +121,45 @@ canvas#robotCanvas {
 }
 
 /* ====== INTRO & CTA SECTIONS ====== */
-.intro, .industries, .cta-banner {
-  padding: 4em 2em;
-  text-align: center;
+.features-grid, .cards-grid, .news-grid {
+  display: grid;
+  gap: 2em;
+}
+
+.features-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2em;
-  margin-top: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.news-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.intro, .services, .industries, .solutions-highlight, .news-insights, .sustainability, .cta-banner {
+  padding: 4em 0;
+}
+
+.sustainability {
+  background: #f5f5f5;
+  text-align: center;
 }
 
 .cta-banner {
   background: #e26b07;
   color: #fff;
-  padding: 3em 1em;
+  text-align: center;
+  padding: 3em 0;
 }
 
-.cta-banner .btn-primary {
-  background: #fff;
+.cta-banner a {
+  background-color: #fff;
   color: #e26b07;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 4px;
 }
 
 /* HIS Section Styles */
@@ -193,14 +211,14 @@ canvas#robotCanvas {
   background-color: var(--light);
   border-radius: 12px;
   padding: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.91);
 }
 
 .his-row-red {
   background-color:  #e26b07;
   border-radius: 12px;
   padding: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.91);
 }
 
 .his-row-red .his-text h3 {
@@ -234,9 +252,10 @@ canvas#robotCanvas {
 }
 
 .his-text h3 {
-  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
   color: #1a365d;
   margin-bottom: 20px;
+  margin-top: 0;
 }
 
 .his-btn-primary {
@@ -249,9 +268,12 @@ canvas#robotCanvas {
 }
 
 .his-text p {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   color: #4a5568;
   line-height: 1.6;
   margin-bottom: 20px;
+  text-align: justify;
+  margin-top: 0;
 }
 
 .his-features {
@@ -298,14 +320,6 @@ canvas#robotCanvas {
   
   .his-text h3 {
     font-size: 1.5rem;
-  }
-
-  .erp-features {
-    padding: 40px 0;
-  }
-
-  .erp-feature-content {
-    padding: 20px; /* Even more compact on mobile */
   }
 }
 
