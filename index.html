@@ -83,34 +83,15 @@ css : main.css
         </div>
     </section>
 
-<section class="industries">
-  <div class="container">
-    <h2>Industries We Serve</h2>
-    <div class="cards-grid">
-      {% for ind in site.data.industries %}
-      <div class="card">
-        <img src="{{ ind.icon }}" alt="{{ ind.title }}">
-        <h3>{{ ind.title }}</h3>
-        <p>{{ ind.description }}</p>
-        <a href="{{ ind.url }}">Explore Solutions →</a>
-      </div>
-      {% endfor %}
-    </div>
+<section class="industries-banner">
+  <img src="{{ '/assets/images/night-city.jpg' | relative_url }}" alt="Night city skyline" class="industries-bg">
+  <div class="industries-overlay"></div>
+
+  <div class="industries-content">
+    <h2>We serve a wide variety of industries.</h2>
+    <p>From defense to healthcare, our expertise powers innovation across sectors.</p>
+    <a href="/industries" class="btn btn-primary">Explore Our Business</a>
   </div>
 </section>
 
 
-<section class="sustainability">
-  <div class="container">
-    <h2>Our Commitment to Sustainability</h2>
-    <p>We are committed to ESG principles and advancing responsible technology adoption.</p>
-    <a href="/sustainability">Learn More →</a>
-  </div>
-</section>
-
-<section class="cta-banner">
-  <div class="container">
-    <h2>Let’s Build Future-Ready Solutions Together</h2>
-    <a class="btn-primary" href="/contact">Get in Touch</a>
-  </div>
-</section>

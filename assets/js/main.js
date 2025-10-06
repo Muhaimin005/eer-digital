@@ -18,3 +18,42 @@
 
   window.addEventListener("load", adjustMainPadding);
   window.addEventListener("resize", adjustMainPadding);
+
+  const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+observer.observe(document.querySelector('.industries-banner'));
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const hero = document.querySelector(".hero");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          hero.classList.add("animate");
+        }
+      });
+    });
+    observer.observe(hero);
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal-left, .reveal-right");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target); // animate only once
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  reveals.forEach(el => observer.observe(el));
+  });
