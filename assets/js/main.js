@@ -65,7 +65,7 @@ document.getElementById('contactForm')?.addEventListener('submit', function(e) {
     btn.disabled = true;
     btn.textContent = 'Sending...';
 
-    emailjs.sendForm('service_vvqn85e', 'service_vvqn85e', this)
+    emailjs.sendForm('service_vvqn85e', 'template_xu9j1nd', this)
         .then(() => {
             alert('Message sent successfully!');
             this.reset();
