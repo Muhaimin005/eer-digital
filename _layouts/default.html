@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="{{ '/assets/css/' | append: page.css | relative_url }}">
   {% endif %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
@@ -50,7 +49,7 @@
         </div>
         <nav>
             <ul>
-            <li><a href="{{ '/about/about' | relative_url }}">About</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
             <li><a href="/business-segments">Business Segment</a></li>
             <li><a href="/industries">Industries</a></li>
             <li><a href="/solutions">Solutions</a></li>
@@ -106,8 +105,6 @@
       <p>&copy; {{ site.title }} {{ "now" | date: "%Y" }}</p>
     </div>
   </footer>
-</body>
-</html>
 
     <!-- Back to Top Button -->
     <div class="back-to-top" id="backToTop">↑</div>
