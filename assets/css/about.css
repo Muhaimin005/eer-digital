@@ -1,0 +1,150 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 103vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff 0%, #f4f4f4 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* 👇 make hero go under header */
+  margin-top: -120px; /* approximate combined height of top-bar + main-nav */
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+body {
+  background: #000; /* or a dark tone that matches hero */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55); /* adjust 0.55 to control darkness */
+  z-index: 2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px; /* matches header height */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+  z-index: 2;
+}
+
+.hero-bg,
+.hero-overlay,
+.hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero .btn-primary {
+  background-color: #e26b07;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 1em;
+}
+
+.hero .btn-secondary {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  max-width: 1400px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.hero h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  text-decoration: none;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.btn-primary {
+  background: #e26b07;
+  color: #fff;
+  margin-right: 1em;
+}
+
+.btn-secondary {
+  border: 2px solid #e26b07;
+  color: #e26b07;
+  background: transparent;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animate each hero element with delay */
+.hero.animate .hero-bg {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero.animate .hero-overlay {
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.hero.animate .hero-content {
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.6s;
+}

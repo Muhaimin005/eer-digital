@@ -46,11 +46,11 @@
         <!-- Second Row -->
         <div class="main-nav">
         <div class="logo">
-            <a href="/"><img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Company Logo"></a>
+            <a href="{% if page.is_home %}#home{% else %}{{ '/' | relative_url }}#home{% endif %} "><img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Company Logo"></a>
         </div>
         <nav>
             <ul>
-            <li><a href="/about">About</a></li>
+            <li><a href="{{ '/about/about' | relative_url }}">About</a></li>
             <li><a href="/business-segments">Business Segment</a></li>
             <li><a href="/industries">Industries</a></li>
             <li><a href="/solutions">Solutions</a></li>
