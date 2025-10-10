@@ -57,3 +57,26 @@ observer.observe(document.querySelector('.industries-banner'));
 
   reveals.forEach(el => observer.observe(el));
   });
+
+  // Form submission handler (EmailJS)
+document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    emailjs.sendForm('service_vvqn85e', 'service_vvqn85e', this)
+        .then(() => {
+            alert('Message sent successfully!');
+            this.reset();
+        })
+        .catch((error) => {
+            console.error('EmailJS Error:', error);
+            alert('Failed to send message. Please try again later.');
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.textContent = 'Send Message';
+        });
+});
+
