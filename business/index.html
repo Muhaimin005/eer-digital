@@ -1,0 +1,175 @@
+---
+layout: default
+title: Business Segments
+css: business.css
+js: business.js
+---
+
+<section class="hero reveal-right">
+   <img src="{{'/assets/images/business-hero-bg.jpg' | relative_url }}" alt="Digital transformation background" class="hero-bg">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1><Em>Empowering Business Transformation in the Digital Era</Em></h1>
+    <h3>From strategy to implementation, we help transform the way industries operate and grow.</h3>
+    <div class="hero-buttons" style="padding-top: 20px ;">
+      <a href="/solutions" class="btn-primary">Our Solutions</a>
+      <a href="/contact" class="btn-secondary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="what-we-do reveal-left">
+  <div class="container">
+    <div class="grid two-col">
+      <div class="col">
+        <h2>What We Do for Your Business</h2>
+        <p>With our expertise, we support enterprises in creating long-term value for employees, customers, and stakeholders. Our digital-first approach ensures that your business is not only ready for today but also prepared for the future.</p>
+
+        <ul class="benefits-list">
+          <li><strong>Strategy & Consulting:</strong> Roadmaps that align technology with business goals.</li>
+          <li><strong>Implementation:</strong> End-to-end delivery across cloud, AI, data and applications.</li>
+          <li><strong>Integration & Modernization:</strong> Connect legacy systems and modern platforms.</li>
+          <li><strong>Managed Services:</strong> Ongoing support, monitoring and optimization.</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <div class="card highlight">
+          <h3>Industry Focus</h3>
+          <p>We bring deep domain expertise across Defence, Healthcare, Financial Services, and Public Sector. Our solutions are secure, compliant, and tailored for mission-critical environments.</p>
+
+          <h4>Key Capabilities</h4>
+          <ul>
+            <li>AI & Automation</li>
+            <li>Cloud Migration & Ops</li>
+            <li>Data Analytics & Insights</li>
+            <li>Secure Systems & Compliance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners reveal-right">
+  <div class="container">
+    <h2>Partners</h2>
+    <p class="subtitle">Our partners are at the heart of our success. Together, we deliver excellence and extend our reach to more customers.</p>
+
+    <div class="partners-carousel-wrap" aria-hidden="false">
+      <div class="partners-carousel" id="partnersCarousel">
+        <!-- Add partner logos here. Example structure below -->
+        <div class="partner">
+          <img src="{{ '/assets/images/partners/Snowflake-logo.png' | relative_url }}" alt="Partner 1">
+        </div>
+        <div class="partner">
+          <img src="{{ '/assets/images/partners/Zscaler-logo.png' | relative_url }}" alt="Partner 2">
+        </div>
+        <div class="partner">
+          <img src="{{ '/assets/images/partners/sagacloud-logo.png' | relative_url }}" alt="Partner 3">
+        </div>
+        <div class="partner">
+          <img src="{{ '/assets/images/partners/oracle-logo.png' | relative_url }}" alt="Partner 4">
+        </div>
+
+        <!-- Duplicate logos for seamless loop -->
+        <div class="partner">
+          <img src="{{ '/assets/images/partners/Snowflake-logo.png' | relative_url }}" alt="Partner 1">
+        </div>
+        <div class="partner">
+          <img src="{{ '/assets/images/partners/Zscaler-logo.png' | relative_url }}" alt="Partner 2">
+        </div>
+        <div class="partner">
+          <img src="{{ '/assets/images/partners/sagacloud-logo.png' | relative_url }}" alt="Partner 3">
+        </div>
+        <div class="partner">
+          <img src="{{ '/assets/images/partners/oracle-logo.png' | relative_url }}" alt="Partner 4">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / End Banner -->
+<section class="contact-us" id="contact">
+  <div class="contact-container">
+    <h2 class="contact-title">Contact Us</h2>
+    <p class="contact-subtitle">
+      Get in touch with our team to discuss how we can help with your digital transformation journey.
+    </p>
+
+    <div class="contact-grid">
+      <!-- LEFT COLUMN: FORM -->
+      <div class="contact-form-wrapper">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+
+      <!-- RIGHT COLUMN: INFO -->
+      <div class="contact-info-wrapper">
+        <div class="contact-info">
+          <h3>Let’s Talk About Your Project</h3>
+
+          <div class="info-item">
+            <div class="icon-circle">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h4>Our Office</h4>
+              <p id="office-address">
+                EER Digital Sdn Bhd <br>
+                E-7-7,Plaza Mont Kiara,<br>
+                No: 2, Jalan Kiara,<br>
+                50480 Wilayah Persekutuan Kuala Lumpur<br>
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon-circle">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <p id="office-phone">+60 3-6211 0496</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon-circle">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p id="office-email">info@eer-digital.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

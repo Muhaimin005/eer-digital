@@ -50,7 +50,7 @@
         <nav>
             <ul>
             <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-            <li><a href="/business-segments">Business Segment</a></li>
+            <li><a href="{{ '/business/' | relative_url }}">Business Segment</a></li>
             <li><a href="/industries">Industries</a></li>
             <li><a href="/solutions">Solutions</a></li>
             </ul>
@@ -95,7 +95,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>&nbsp;</h4>--!>
+        <h4>&nbsp;</h4>-->
         <p><!-- you can leave this empty or use for newsletter later --></p>
       </div>
     </div>
@@ -116,6 +116,7 @@
       })();
     </script>
     <!-- JavaScript -->
+     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     {% if page.js %}
     <script src="{{ '/assets/js/' | append: page.js | relative_url }}"></script>
     {% endif %}

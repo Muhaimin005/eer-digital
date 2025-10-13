@@ -102,44 +102,107 @@ header.scrolled .logo img {
   height: 30px; /* shrink logo when scrolled */
 }
 
+/* ====== FOOTER ====== */
+footer {
+  margin-top: auto;
+  padding-bottom: 0;
+  background: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* Top section: columns */
 footer .footer-top {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2em;
   background: #f5f5f5;
-  padding: 2em;
+  padding: 2.5em 3em;
 }
 
 footer .footer-top h4 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.75em;
+  color: #000;
+  font-size: 1rem;
 }
 
 footer .footer-top ul {
   list-style: none;
   padding: 0;
-  margin-top: 0.1rem;
+  margin: 0;
+}
+
+footer .footer-top li {
+  margin-bottom: 0.5em;
 }
 
 footer .footer-top a {
   color: #333;
   text-decoration: none;
-  margin-top: 0.1rem;
+  transition: color 0.3s ease;
 }
 
+footer .footer-top a:hover {
+  color: #e26b07;
+}
+
+/* Social icons */
 footer .social-icons a {
-  margin-right: 0.5em;
+  margin-right: 0.75em;
   text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
+footer .social-icons a:hover {
+  color: #e26b07;
+}
+
+/* Bottom section */
 footer .footer-bottom {
   background: #000;
   color: #fff;
   text-align: center;
-  max-height: 10px;
+  padding: 1em 0;           /* ✅ spacing for height */
+  line-height: 1.4;         /* ✅ keeps text readable */
+  font-size: 0.9rem;
 }
 
-footer
-{
-  margin-top: auto;
-  padding-bottom: 0;
+footer .footer-bottom p {
+  margin: 0;
 }
+
+/* ===== Back to Top Button ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: #e26b07;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2000;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: #cf5f06;
+  transform: translateY(-4px);
+}
+
