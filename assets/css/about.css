@@ -1,3 +1,17 @@
+/* === Fix Layout Overflow & Full Width === */
+body, html {
+  overflow-x: hidden; /* prevent horizontal scrolling */
+  width: 100%;
+}
+
+.hero,
+.purpose-section,
+.mv-section,
+.core-values {
+  width: 100vw; /* ensure full viewport width */
+  box-sizing: border-box;
+}
+
 .hero {
   position: relative;
   width: 100%;
