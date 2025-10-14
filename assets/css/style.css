@@ -48,11 +48,12 @@ header .top-bar a {
   text-decoration: none;
 }
 
+/* --- Main Nav (Desktop) --- */
 header .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:1.5em;
+  padding: 1.5em;
   border-bottom: 1px solid #e26b07;
   position: fixed;
   top: 30px;
@@ -60,46 +61,47 @@ header .main-nav {
   background: #fff;
   transition: all 0.3s ease;
   z-index: 999;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
-header .main-nav ul {
+.desktop-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 13px;
 }
 
-header .main-nav li {
+.desktop-nav li {
   display: inline-block;
   margin-left: 1.5em;
 }
 
-header .main-nav a {
+.desktop-nav a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
 }
 
+
 /* Base logo size */
 .logo img {
   height: 60px; /* control with height instead of font-size since it’s an image */
   transition: height 0.3s ease;
-  top: 5px; /* move upward */
+  top: 3px; /* move upward */
   padding-bottom: 10px;
 }
 
 /* When scrolled */
-header.scrolled {
-  background-color: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  height: 40px; /* shrink header height */
-  width: auto;
+/* ===== Header Scroll Shrink Effect ===== */
+header.scrolled .main-nav {
+  padding: 0.6em 1.5em;      /* smaller vertical padding */
+  border-bottom: 1px solid #e26b07;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 header.scrolled .logo img {
-  height: 30px; /* shrink logo when scrolled */
+  height: 40px;              /* shrink logo */
+  transition: height 0.3s ease;
 }
 
 /* ====== FOOTER ====== */
@@ -206,3 +208,88 @@ footer .footer-bottom p {
   transform: translateY(-4px);
 }
 
+
+/* ===========================
+   MOBILE MENU STYLES
+=========================== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #e26b07;
+  cursor: pointer;
+  z-index: 2002;
+}
+
+/* Sidebar Menu */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -260px; /* hidden initially */
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease;
+  z-index: 2001;
+  padding-top: 100px;
+  display: none; /* hidden by default (desktop) */
+}
+
+.mobile-nav.active {
+  right: 0;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Overlay */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2000;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ===========================
+   RESPONSIVE BEHAVIOR
+=========================== */
+@media (max-width: 992px) {
+  /* Hide desktop menu */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Show burger icon */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Show sidebar structure */
+  .mobile-nav {
+    display: block;
+  }
+}

@@ -47,14 +47,27 @@
         <div class="logo">
             <a href="{% if page.is_home %}#home{% else %}{{ '/' | relative_url }}#home{% endif %} "><img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Company Logo"></a>
         </div>
-        <nav>
+        <!-- Mobile Menu Toggle -->
+        <div class="menu-toggle" id="menuToggle" style="margin-right: 20px;">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav nav class="desktop-nav">
             <ul>
             <li><a href="{{ '/about/' | relative_url }}">About</a></li>
             <li><a href="{{ '/business/' | relative_url }}">Business Segment</a></li>
-            <li><a href="/industries">Industries</a></li>
+            <li><a href="{{ '/industries/' | relative_url }}">Industries</a></li>
             <li><a href="/solutions">Solutions</a></li>
             </ul>
         </nav>
+        <nav class="mobile-nav" id="mobileNav">
+            <ul>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+            <li><a href="{{ '/business/' | relative_url }}">Business Segment</a></li>
+            <li><a href="{{ '/industries/' | relative_url }}">Industries</a></li>
+            <li><a href="/solutions">Solutions</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay" id="navOverlay"></div>
         </div>
     </header>
     <!-- Main Content -->

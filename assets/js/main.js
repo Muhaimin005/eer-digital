@@ -112,3 +112,31 @@ backToTop?.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+// --- Mobile menu toggle ---
+const menuToggle = document.getElementById("menuToggle");
+const mobileNav = document.getElementById("mobileNav");
+const navOverlay = document.getElementById("navOverlay");
+
+if (menuToggle && mobileNav && navOverlay) {
+  menuToggle.addEventListener("click", () => {
+    mobileNav.classList.toggle("active");
+    navOverlay.classList.toggle("active");
+  });
+
+  navOverlay.addEventListener("click", () => {
+    mobileNav.classList.remove("active");
+    navOverlay.classList.remove("active");
+  });
+
+  // Close menu when link clicked
+  document.querySelectorAll("#mobileNav a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("active");
+      navOverlay.classList.remove("active");
+    });
+  });
+}
+
+
+

@@ -1,0 +1,106 @@
+---
+layout: default
+title: Industries
+css : industries.css
+js : industries.js
+---
+<section class="hero">
+   <img src="{{'/assets/images/industries-hero-bg.jpg' | relative_url }}" alt="Digital transformation background" class="hero-bg">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Delivering Tomorrow’s Technology, Today</h1>
+    <h3>Your reliable partner in IT and energy transformation.</h3>
+    <div class="hero-buttons" style="padding-top: 20px ;">
+      <a href="/solutions" class="btn-primary">Our Solutions</a>
+      <a href="/contact" class="btn-secondary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES SECTION -->
+<section class="industries-tabs">
+  <div class="industries-header">
+    <button class="industry-btn active" data-target="oilgas">Oil & Gas</button>
+    <button class="industry-btn" data-target="healthcare">Healthcare</button>
+    <button class="industry-btn" data-target="public">Public Sector & Taxation</button>
+  </div>
+
+  <div class="industries-content">
+
+    <!-- Oil & Gas -->
+    <div class="industry-panel active" id="oilgas">
+      <div class="industry-box">
+        <div class="industry-grid">
+          <div class="industry-text">
+            <h2>Oil & Gas</h2>
+            <p>
+              We support oil and gas companies in their digital transformation journey by enabling smarter, safer, and
+              more efficient operations. Through advanced technologies, we help optimize resources, improve
+              workflows, and unlock long-term value.
+            </p>
+            <p>
+              We drive digital transformation in the energy sector by implementing data-driven 
+              solutions, intelligent monitoring, and automation systems that improve efficiency and 
+              ensure sustainability.
+            </p>
+            <ul>
+              <li>Predictive maintenance with IoT & analytics</li>
+              <li>Operational visibility through real-time dashboards</li>
+              <li>Enhanced safety and compliance solutions</li>
+            </ul>
+          </div>
+          <div class="industry-image">
+            <img src="{{ '/assets/images/oil-and-gas.jpg' | relative_url }}" alt="Oil and Gas Industry">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Healthcare -->
+    <div class="industry-panel" id="healthcare">
+      <div class="industry-box">
+        <div class="industry-grid">
+          <div class="industry-text">
+            <h2>Healthcare</h2>
+            <p>
+              We empower healthcare organizations with advanced digital technologies, enabling better 
+              patient outcomes, streamlined processes, and secure data management.
+            </p>
+            <ul>
+              <li>Electronic Health Record (EHR) systems</li>
+              <li>Telemedicine and remote patient monitoring</li>
+              <li>AI-powered diagnostic and data analytics</li>
+            </ul>
+          </div>
+          <div class="industry-image">
+            <img src="{{ '/assets/images/healthcare.jpg' | relative_url }}" alt="Healthcare Industry">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Public Sector -->
+    <div class="industry-panel" id="public">
+      <div class="industry-box">
+        <div class="industry-grid">
+          <div class="industry-text">
+            <h2>Public Sector & Taxation</h2>
+            <p>
+              We help governments and agencies modernize their operations, improving transparency, 
+              efficiency, and citizen engagement through smart, secure digital systems.
+            </p>
+            <ul>
+              <li>Digital tax management systems</li>
+              <li>e-Government platforms</li>
+              <li>Data governance and analytics solutions</li>
+            </ul>
+          </div>
+          <div class="industry-image">
+            <img src="{{ '/assets/images/public-sector.jpg' | relative_url }}" alt="Public Sector Industry">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
