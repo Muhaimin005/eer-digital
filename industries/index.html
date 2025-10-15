@@ -12,7 +12,7 @@ js : industries.js
     <h3>Your reliable partner in IT and energy transformation.</h3>
     <div class="hero-buttons" style="padding-top: 20px ;">
       <a href="/solutions" class="btn-primary">Our Solutions</a>
-      <a href="/contact" class="btn-secondary">Contact Us</a>
+      <a class="btn-secondary" id="openContactBtn">Contact Us</a>
     </div>
   </div>
 </section>
@@ -43,11 +43,6 @@ js : industries.js
               solutions, intelligent monitoring, and automation systems that improve efficiency and 
               ensure sustainability.
             </p>
-            <ul>
-              <li>Predictive maintenance with IoT & analytics</li>
-              <li>Operational visibility through real-time dashboards</li>
-              <li>Enhanced safety and compliance solutions</li>
-            </ul>
           </div>
           <div class="industry-image">
             <img src="{{ '/assets/images/oil-and-gas.jpg' | relative_url }}" alt="Oil and Gas Industry">
@@ -63,13 +58,14 @@ js : industries.js
           <div class="industry-text">
             <h2>Healthcare</h2>
             <p>
-              We empower healthcare organizations with advanced digital technologies, enabling better 
-              patient outcomes, streamlined processes, and secure data management.
+              We empower healthcare organizations with advanced digital technologies that enhance patient outcomes, 
+              optimize operational efficiency, and ensure the highest standards of data security. 
+              Our solutions support healthcare providers in delivering smarter, faster, and more connected care experiences.
             </p>
-            <ul>
-              <li>Electronic Health Record (EHR) systems</li>
-              <li>Telemedicine and remote patient monitoring</li>
-              <li>AI-powered diagnostic and data analytics</li>
+            <p>
+              From streamlining workflows to improving clinical decision-making,
+              our solutions enable better patient outcomes and long-term operational excellence.
+            </p>
             </ul>
           </div>
           <div class="industry-image">
@@ -86,14 +82,15 @@ js : industries.js
           <div class="industry-text">
             <h2>Public Sector & Taxation</h2>
             <p>
-              We help governments and agencies modernize their operations, improving transparency, 
-              efficiency, and citizen engagement through smart, secure digital systems.
+              We help governments and public agencies modernize their operations by implementing intelligent, 
+              data-driven digital systems. Our solutions enhance transparency, improve operational efficiency, 
+              and strengthen citizen engagement through secure and seamlessly connected platforms.
             </p>
-            <ul>
-              <li>Digital tax management systems</li>
-              <li>e-Government platforms</li>
-              <li>Data governance and analytics solutions</li>
-            </ul>
+            <p>
+              Through data integration, automation, and human-centered design, 
+              we drive greater transparency, efficiency, and public trust in every interaction.
+            </p>
+
           </div>
           <div class="industry-image">
             <img src="{{ '/assets/images/public-sector.jpg' | relative_url }}" alt="Public Sector Industry">
@@ -102,5 +99,16 @@ js : industries.js
       </div>
     </div>
 
+  </div>
+</section>
+
+<section class="industries-banner">
+  <img src="{{ '/assets/images/industry-pic-2.jpg' | relative_url }}" alt="Night city skyline" class="industries-bg">
+  <div class="industries-overlay"></div>
+
+  <div class="industries-layout">
+    <h2>Let’s Build the Future Together</h2>
+    <p>Join us in shaping the digital future through intelligent, data-driven innovation.</p>
+    <a class="btn btn-primary" id="openContactBtn">Contact Us</a>
   </div>
 </section>

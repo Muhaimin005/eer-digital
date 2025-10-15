@@ -2,7 +2,6 @@
 layout: default
 title: about
 css : about.css
-js : main.js
 ---
 <section class="hero">
    <img src="{{'/assets/images/about-hero-bg.jpg' | relative_url }}" alt="Digital transformation background" class="hero-bg">
@@ -12,7 +11,7 @@ js : main.js
     <h3>Your reliable partner in IT and energy transformation.</h3>
     <div class="hero-buttons" style="padding-top: 20px ;">
       <a href="/solutions" class="btn-primary">Our Solutions</a>
-      <a href="/contact" class="btn-secondary">Contact Us</a>
+      <a class="btn-secondary" id="openContactBtn" >Contact Us</a>
     </div>
   </div>
 </section>
@@ -153,3 +152,7 @@ js : main.js
     </div>
   </div>
 </section>
+
+<script>
+window.addEventListener("scroll", () => console.log("Scrolling!", window.scrollY));
+</script>

@@ -1,3 +1,5 @@
+console.log("Main.js loaded!");
+
 // ==========================
 // EER Digital – Main JS File
 // ==========================
@@ -138,5 +140,27 @@ if (menuToggle && mobileNav && navOverlay) {
   });
 }
 
+ document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById('openContactBtn');
+  const modal = document.getElementById('contactModal');
+  const closeBtn = document.getElementById('closeContactBtn');
 
+  if (!openBtn || !modal || !closeBtn) return; // stop if not found
 
+  openBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // prevent scroll
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+});
