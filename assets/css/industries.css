@@ -228,3 +228,14 @@
   transform: translateY(0);
   box-shadow: none;
 }
+
+/* Reveal Animations */
+.reveal-left, .reveal-right {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.reveal-left.active, .reveal-right.active {
+  opacity: 1;
+  transform: translateY(0);
+}

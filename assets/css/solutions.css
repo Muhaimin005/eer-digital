@@ -1,0 +1,364 @@
+/* ===== SOLUTIONS PAGE ===== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 103vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff 0%, #f4f4f4 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* 👇 make hero go under header */
+  margin-top: -120px; /* approximate combined height of top-bar + main-nav */
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+body {
+  background: #000; /* or a dark tone that matches hero */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55); /* adjust 0.55 to control darkness */
+  z-index: 2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px; /* matches header height */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+  z-index: 2;
+}
+
+.hero-bg,
+.hero-overlay,
+.hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero .btn-primary {
+  background-color: #e26b07;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 1em;
+}
+
+.hero .btn-secondary {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  max-width: 1400px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.hero h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  text-decoration: none;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.btn-primary {
+  background: #e26b07;
+  color: #fff;
+  margin-right: 1em;
+}
+
+.btn-secondary {
+  border: 2px solid #e26b07;
+  color: #e26b07;
+  background: transparent;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animate each hero element with delay */
+.hero.animate .hero-bg {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero.animate .hero-overlay {
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.hero.animate .hero-content {
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.solution-section {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  color: #fff;
+}
+
+.solution-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.solution-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.55);
+  z-index: 1;
+  transform: scale(1.1);
+  transition: transform 1s ease;
+}
+
+.solution-section.active .solution-bg {
+  transform: scale(1);
+}
+
+.solution-content {
+  position: relative;
+  z-index: 2;
+  max-width: 550px;
+  padding: 2.5rem 3rem;
+  background: rgba(0,0,0,0.55);
+  border-left: 5px solid #e26b07;
+  margin-right: 8%;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.solution-section.reverse .solution-content {
+  margin-right: 0;
+  margin-left: 8%;
+  border-left: none;
+  border-right: 5px solid #e26b07;
+}
+
+.solution-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.solution-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #f2f2f2;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll reveal base */
+.reveal-left, .reveal-right {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.reveal-left.active, .reveal-right.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .solution-section {
+    flex-direction: column !important;
+    justify-content: center;
+    height: auto;
+    min-height: 80vh;
+    padding: 2rem 0;
+  }
+
+  .solution-content {
+    margin: 0;
+    border: none;
+    background: rgba(0,0,0,0.6);
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .solution-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .solution-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Reveal Animations */
+.reveal-left, .reveal-right {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.reveal-left.active, .reveal-right.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== INDUSTRIES BANNER SECTION ===== */
+.industries-banner {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.industries-banner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.industries-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.industries-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55); /* darkens image for text contrast */
+  z-index: 2;
+}
+
+.industries-layout {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  padding: 2em;
+}
+
+.industries-layout h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+
+.industries-layout p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #e26b07;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #cf5f06;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
