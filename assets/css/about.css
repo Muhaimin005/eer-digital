@@ -367,3 +367,130 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
+
+/* ===========================
+   MOBILE RESPONSIVE ENHANCEMENTS
+   (Hero untouched)
+=========================== */
+@media (max-width: 992px) {
+
+  /* --- Purpose Section --- */
+  .purpose-section {
+    padding: 4em 1.5em;
+  }
+
+  .purpose-section .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2em;
+  }
+
+  .purpose-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .purpose-text p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .purpose-image img {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  /* --- Mission & Vision --- */
+  .mv-section {
+    padding: 4em 1.5em;
+  }
+
+  .mv-section h2 {
+    font-size: 2rem;
+  }
+
+  .mv-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .mv-card {
+    padding: 1.5em;
+  }
+
+  .mv-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .mv-card p {
+    font-size: 0.95rem;
+  }
+
+  /* --- Core Values --- */
+  .core-values {
+    padding: 4em 1.5em;
+  }
+
+  .core-values h2 {
+    font-size: 2rem;
+  }
+
+  .core-values .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2em;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .value-card {
+    width: 100%;
+    max-width: 200px;
+    height: 220px;
+  }
+
+  /* Reduce flip animation sensitivity on touch devices */
+
+  .value-card-inner.flipped {
+    transform: rotateY(180deg);
+  } 
+
+  .value-card-inner {
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.3, 1);
+  }
+
+  .value-card-front, .value-card-back {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+}
+
+/* --- Small Screens (Phones under 600px) --- */
+@media (max-width: 600px) {
+  .purpose-section {
+    padding: 3em 1em;
+  }
+
+  .purpose-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .mv-section h2,
+  .core-values h2 {
+    font-size: 1.8rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .value-card {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .mv-card p {
+    font-size: 0.9rem;
+  }
+}

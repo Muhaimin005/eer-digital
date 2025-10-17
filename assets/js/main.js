@@ -169,3 +169,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".value-card");
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      // Toggle the flip only on mobile screens
+      if (window.innerWidth <= 992) {
+        card.querySelector(".value-card-inner").classList.toggle("flipped");
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".value-card");
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      // Only trigger on mobile / touch devices
+      if (window.innerWidth <= 992) {
+        const inner = card.querySelector(".value-card-inner");
+        inner.classList.toggle("flipped");
+      }
+    });
+  });
+});
