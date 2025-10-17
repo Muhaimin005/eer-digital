@@ -1,0 +1,165 @@
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 103vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+  margin-top: -120px; /* header overlap if used */
+}
+.hero-bg { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:center; z-index:1; }
+.hero-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.45); z-index:2; }
+.hero-content { position:relative; z-index:3; color:#fff; max-width:900px; padding: 0 20px; }
+.hero h1 { font-size: clamp(2rem,5vw,3rem); margin-bottom:0.25em; }
+.hero h3 { font-size: clamp(1rem,2.5vw,1.25rem); margin-bottom:0.75em; color: #fff; }
+.hero-lead { color: rgba(255,255,255,0.9); font-size:1rem; margin-top:0.5rem; }
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  text-decoration: none;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.btn-primary {
+  background: #e26b07;
+  color: #fff;
+  margin-right: 1em;
+}
+
+.btn-secondary {
+  border: 2px solid #fff;
+  color:  #fff;
+  background: transparent;
+}
+
+/* ===== Careers Page ===== */
+.careers-intro {
+  text-align: center;
+  padding: 6em 2em;
+  background: #fff;
+  color: #1a365d;
+}
+
+.careers-intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.careers-intro p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #4a5568;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.careers-intro .btn-primary {
+  background: #e26b07;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.careers-intro .btn-primary:hover {
+  background: #cf5f06;
+}
+
+/* ===== Values Grid ===== */
+.careers-values {
+  background: #f8f8f8;
+  padding: 6em 2em;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2em;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.value-card i {
+  font-size: 2.2rem;
+  color: #e26b07;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  color: #1a365d;
+  margin-bottom: 0.75rem;
+}
+
+.value-card p {
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== CTA Section ===== */
+.careers-cta {
+  background: linear-gradient(90deg, rgba(226,107,7,0.9), rgba(226,107,7,0.7));
+  color: #fff;
+  text-align: center;
+  padding: 5em 2em;
+}
+
+.careers-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.careers-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.careers-cta .btn-secondary {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  padding: 0.75em 1.5em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.careers-cta .btn-secondary:hover {
+  background: #fff;
+  color: #e26b07;
+}
+
+/* Reveal Animations */
+.reveal-left, .reveal-right {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal-left.active, .reveal-right.active {
+  opacity: 1;
+  transform: translateY(0);
+}
