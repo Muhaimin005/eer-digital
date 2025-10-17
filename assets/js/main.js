@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
 // ===== Back to Top Button =====
 const backToTop = document.getElementById("backToTop");
 
@@ -115,7 +114,7 @@ backToTop?.addEventListener("click", () => {
   });
 });
 
-// --- Mobile menu toggle ---
+// ===== Mobile Menu Toggle =====
 const menuToggle = document.getElementById("menuToggle");
 const mobileNav = document.getElementById("mobileNav");
 const navOverlay = document.getElementById("navOverlay");
@@ -140,27 +139,33 @@ if (menuToggle && mobileNav && navOverlay) {
   });
 }
 
- document.addEventListener("DOMContentLoaded", () => {
-  const openBtn = document.getElementById('openContactBtn');
-  const modal = document.getElementById('contactModal');
-  const closeBtn = document.getElementById('closeContactBtn');
+// ===== Contact Modal (For Multiple Buttons) =====
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtns = document.querySelectorAll(".openContactBtn");
+  const modal = document.getElementById("contactModal");
+  const closeBtn = document.getElementById("closeContactBtn");
 
-  if (!openBtn || !modal || !closeBtn) return; // stop if not found
+  if (!openBtns.length || !modal || !closeBtn) return;
 
-  openBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // prevent scroll
+  // Open modal when any Contact button is clicked
+  openBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden"; // prevent scroll
+    });
   });
 
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
+  // Close modal
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
   });
 
-  window.addEventListener('click', (e) => {
+  // Close modal if clicking outside content
+  window.addEventListener("click", (e) => {
     if (e.target === modal) {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
     }
   });
 });

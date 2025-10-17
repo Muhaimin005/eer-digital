@@ -11,20 +11,46 @@ js : industries.js
     <h1>Delivering Tomorrow’s Technology, Today</h1>
     <h3>Your reliable partner in IT and energy transformation.</h3>
     <div class="hero-buttons" style="padding-top: 20px ;">
-      <a href="/solutions" class="btn-primary">Our Solutions</a>
-      <a class="btn-secondary" id="openContactBtn" >Contact Us</a>
+      <a href="{{ '/solutions/' | relative_url }}" class="btn-primary">Our Solutions</a>
+      <a class="btn-secondary openContactBtn" >Contact Us</a>
     </div>
   </div>
 </section>
 
 <!-- INDUSTRIES SECTION -->
 <section class="industries-tabs">
-  <div class="industries-header">
+ <div class="industries-header">
+  <!-- 🔹 Desktop Buttons -->
+  <div class="industry-buttons">
     <button class="industry-btn active" data-target="oilgas">Oil & Gas</button>
     <button class="industry-btn" data-target="healthcare">Healthcare</button>
     <button class="industry-btn" data-target="public">Public Sector & Taxation</button>
+    <button class="industry-btn" data-target="retail">Retail & Consumer Goods</button>
+    <button class="industry-btn" data-target="manufacturing">Manufacturing & Industrial</button>
+    <button class="industry-btn" data-target="banking">Banking & Financial Services</button>
+    <button class="industry-btn" data-target="maritime">Maritime</button>
+    <button class="industry-btn" data-target="education">Education & Research</button>
+    <button class="industry-btn" data-target="agriculture">Agriculture & Sustainability</button>
   </div>
 
+  <!-- 🔹 Mobile Dropdown -->
+  <div class="industry-dropdown-wrap">
+    <label for="industrySelect" class="industry-label">Select Industry:</label>
+    <select id="industrySelect" class="industry-dropdown">
+      <option value="oilgas">Oil & Gas</option>
+      <option value="healthcare">Healthcare</option>
+      <option value="public">Public Sector & Taxation</option>
+      <option value="retail">Retail & Consumer Goods</option>
+      <option value="manufacturing">Manufacturing & Industrial</option>
+      <option value="banking">Banking & Financial Services</option>
+      <option value="maritime">Maritime</option>
+      <option value="education">Education & Research</option>
+      <option value="agriculture">Agriculture & Sustainability</option>
+    </select>
+  </div>
+</div>
+
+  
   <div class="industries-content">
 
     <!-- Oil & Gas -->
@@ -37,11 +63,6 @@ js : industries.js
               We support oil and gas companies in their digital transformation journey by enabling smarter, safer, and
               more efficient operations. Through advanced technologies, we help optimize resources, improve
               workflows, and unlock long-term value.
-            </p>
-            <p>
-              We drive digital transformation in the energy sector by implementing data-driven 
-              solutions, intelligent monitoring, and automation systems that improve efficiency and 
-              ensure sustainability.
             </p>
           </div>
           <div class="industry-image">
@@ -61,10 +82,6 @@ js : industries.js
               We empower healthcare organizations with advanced digital technologies that enhance patient outcomes, 
               optimize operational efficiency, and ensure the highest standards of data security. 
               Our solutions support healthcare providers in delivering smarter, faster, and more connected care experiences.
-            </p>
-            <p>
-              From streamlining workflows to improving clinical decision-making,
-              our solutions enable better patient outcomes and long-term operational excellence.
             </p>
             </ul>
           </div>
@@ -86,10 +103,6 @@ js : industries.js
               data-driven digital systems. Our solutions enhance transparency, improve operational efficiency, 
               and strengthen citizen engagement through secure and seamlessly connected platforms.
             </p>
-            <p>
-              Through data integration, automation, and human-centered design, 
-              we drive greater transparency, efficiency, and public trust in every interaction.
-            </p>
 
           </div>
           <div class="industry-image">
@@ -100,6 +113,121 @@ js : industries.js
     </div>
 
   </div>
+    <!-- retail -->
+    <div class="industry-panel active" id="retail">
+      <div class="industry-box">
+        <div class="industry-grid">
+          <div class="industry-text">
+            <h2>Retail and Consumer Goods</h2>
+            <p>
+              We empower retailers to understand consumer behavior through data analytics, improve operations
+              with ERP-driven inventory control, and enhance customer engagement using AI-driven personalization
+              and digital experience platforms.
+            </p>
+          </div>
+          <div class="industry-image">
+            <img src="{{ '/assets/images/retail.jpg' | relative_url }}" alt="Oil and Gas Industry">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manufacturing-->
+    <div class="industry-panel active" id="manufacturing">
+      <div class="industry-box">
+        <div class="industry-grid">
+          <div class="industry-text">
+            <h2>Manufacturing and Industrial</h2>
+            <p>
+              We deliver digital transformation across production lines with intelligent ERP systems, IoT data analytics, 
+              and AI-assisted forecasting. Manufacturers gain end-to-end visibility, better demand planning, and streamlined 
+              supply chains through data integration and automation.
+            </p>
+          </div>
+          <div class="industry-image">
+            <img src="{{ '/assets/images/manufacturing.jpg' | relative_url }}" alt="Oil and Gas Industry">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banking -->
+    <div class="industry-panel active" id="banking">
+      <div class="industry-box">
+        <div class="industry-grid">
+          <div class="industry-text">
+            <h2>Banking and Financial Services</h2>
+            <p>
+              We support financial institutions with secure cloud infrastructures, 
+              data management platforms, and AI-driven risk analytics. 
+              This enables faster decision-making, stronger compliance, and better 
+              protection against evolving cyber threats.
+            </p>
+          </div>
+          <div class="industry-image">
+            <img src="{{ '/assets/images/banking.jpg' | relative_url }}" alt="Oil and Gas Industry">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maritime -->
+    <div class="industry-panel active" id="maritime">
+      <div class="industry-box">
+        <div class="industry-grid">
+          <div class="industry-text">
+            <h2>Maritime and Port Operations</h2>
+            <p>
+              We support the maritime sector with intelligent logistics, asset monitoring, 
+              and predictive systems powered by data analytics and AI. 
+              By integrating operational visibility across fleets, ports, and supply chains, we 
+              help maritime operators and fishermans improve safety, reduce fuel costs, and enhance overall efficiency.
+            </p>
+          </div>
+          <div class="industry-image">
+            <img src="{{ '/assets/images/maritime.jpg' | relative_url }}" alt="Oil and Gas Industry">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- education -->
+    <div class="industry-panel active" id="education">
+      <div class="industry-box">
+        <div class="industry-grid">
+          <div class="industry-text">
+            <h2>Education and Research</h2>
+            <p>
+              We help institutions modernize their administrative systems, enhance collaboration, 
+              and improve data management. Advanced analytics and AI solutions also support 
+              personalized learning, institutional efficiency, and research excellence.
+            </p>
+          </div>
+          <div class="industry-image">
+            <img src="{{ '/assets/images/education.jpg' | relative_url }}" alt="Oil and Gas Industry">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agriculture -->
+    <div class="industry-panel active" id="agriculture">
+      <div class="industry-box">
+        <div class="industry-grid">
+          <div class="industry-text">
+            <h2>Agriculture and Sustainability</h2>
+            <p>
+              We integrate IoT data, analytics, and intelligent platforms to help agribusinesses optimize resource usage, 
+              monitor crop health, and improve yield forecasting. 
+              This leads to more sustainable and profitable farming practices.
+            </p>
+          </div>
+          <div class="industry-image">
+            <img src="{{ '/assets/images/agriculture.jpg' | relative_url }}" alt="Oil and Gas Industry">
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
 
 <section class="industries-banner">
