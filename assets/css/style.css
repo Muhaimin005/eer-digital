@@ -428,3 +428,76 @@ footer .footer-bottom p {
   }
 }
 
+/* === Popup Overlay === */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Show state */
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Popup Box */
+.popup-box {
+  background: #fff;
+  padding: 2em 2.5em;
+  border-radius: 12px;
+  max-width: 520px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: popIn 0.4s ease;
+}
+
+.popup-box h2 {
+  color: #e26b07;
+  margin-bottom: 0.5em;
+}
+
+.popup-box p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.popup-box .btn-primary {
+  display: inline-block;
+  background: #e26b07;
+  color: #fff;
+  padding: 0.7em 1.5em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.popup-box .btn-primary:hover {
+  background: #c65a05;
+}
+
+/* Close Button */
+.close-popup {
+  position: absolute;
+  top: 12px; right: 16px;
+  font-size: 1.5rem;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

@@ -1,0 +1,296 @@
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 103vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  margin-top: -120px; /* header overlap if used */
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  z-index: 1;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 2;
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  max-width: 900px;
+  padding: 0 20px;
+}
+.hero h1 {
+  font-size: clamp(2rem,5vw,3rem);
+  margin-bottom: 0.25em;
+}
+.hero h3 {
+  font-size: clamp(1rem,2.5vw,1.25rem);
+  margin-bottom: 0.75em;
+  color: #fff;
+}
+.hero-lead {
+  color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  text-decoration: none;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.btn-primary {
+  background: #e26b07;
+  color: #fff;
+  margin-right: 1em;
+}
+.btn-secondary {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+
+/* === OVERVIEW SECTION === */
+.vascom-overview {
+  position: relative;
+  background: url("/assets/images/byd-vascom-bg.jpg") center/cover no-repeat fixed;
+  padding: 6em 2em;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.vascom-overview::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* dark overlay for readability */
+  z-index: 1;
+}
+
+.vascom-overview .glass-box {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 3em 2em;
+  max-width: 900px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.vascom-overview h2 {
+  font-size: 2.2rem;
+  color: #ff8a1a;
+  margin-bottom: 1em;
+}
+
+
+/* === FEATURES SECTION === */
+.vascom-features {
+  padding: 5em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.feature-row {
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3em;
+  padding: 3em 2em;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+
+.feature-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-image img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-text h3 {
+  font-size: 1.8rem;
+  color: #ff8a1a;
+  margin-bottom: 0.6em;
+}
+
+.feature-text p {
+  color: black;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* === BENEFITS SECTION === */
+.vascom-benefits {
+  position: relative;
+  background: url("/assets/images/vascom-benefits-bg.jpg") center/cover no-repeat fixed;
+  padding: 6em 2em;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.vascom-benefits::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+.vascom-benefits h2,
+.benefit-grid {
+  position: relative;
+  z-index: 2;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.benefit-card {
+  background: rgba(255,255,255,0.05);
+  padding: 2em;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.benefit-card i {
+  font-size: 2rem;
+  color: #ff8a1a;
+  margin-bottom: 0.8em;
+}
+
+.benefit-card h4 {
+  color: #fff;
+  margin-bottom: 0.4em;
+}
+
+.benefit-card p {
+  color: #fff;
+}
+
+/* === CTA SECTION === */
+.vascom-cta {
+  background: #0b0d13;
+  padding: 5em 2em;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.vascom-cta h2 {
+  color: #ff8a1a;
+  font-size: 2rem;
+  margin-bottom: 0.8em;
+}
+
+.vascom-cta p {
+  max-width: 800px;
+  margin: 0 auto 2em;
+  color: #ccc;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  padding: 0.9em 1.8em;
+  border-radius: 6px;
+  margin: 0.5em;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.coverage {
+  margin-top: 2em;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  display: inline-block;
+  padding: 1em 2em;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* === Reveal Animation === */
+.reveal-left, .reveal-right {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal-left.active, .reveal-right.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+  .feature-row, .feature-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-image img {
+    max-width: 90%;
+  }
+
+  .benefit-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .btn-primary, .btn-secondary {
+    display: block;
+    margin: 0.5em auto;
+  }
+}
+

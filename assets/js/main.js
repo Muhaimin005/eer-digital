@@ -196,3 +196,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("newsPopup");
+  const closeBtn = document.getElementById("closePopup");
+
+  // Check if user has already seen popup
+  const hasSeenPopup = localStorage.getItem("newsPopupSeen");
+
+  if (!hasSeenPopup && popup) {
+    setTimeout(() => {
+      popup.classList.add("active");
+    }, 1000); // delay a bit after page load
+  }
+
+  // Close popup
+  const closePopup = () => {
+    popup.classList.remove("active");
+    localStorage.setItem("newsPopupSeen", "true"); // remember user
+  };
+
+  closeBtn.addEventListener("click", closePopup);
+
+  // Close if clicking outside box
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) closePopup();
+  });
+});

@@ -3,20 +3,48 @@
   position: relative;
   width: 100%;
   height: 103vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  overflow:hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
   margin-top: -120px; /* header overlap if used */
 }
-.hero-bg { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:center; z-index:1; }
-.hero-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.45); z-index:2; }
-.hero-content { position:relative; z-index:3; color:#fff; max-width:900px; padding: 0 20px; }
-.hero h1 { font-size: clamp(2rem,5vw,3rem); margin-bottom:0.25em; }
-.hero h3 { font-size: clamp(1rem,2.5vw,1.25rem); margin-bottom:0.75em; color: #fff; }
-.hero-lead { color: rgba(255,255,255,0.9); font-size:1rem; margin-top:0.5rem; }
-
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  z-index: 1;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 2;
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  max-width: 900px;
+  padding: 0 20px;
+}
+.hero h1 {
+  font-size: clamp(2rem,5vw,3rem);
+  margin-bottom: 0.25em;
+}
+.hero h3 {
+  font-size: clamp(1rem,2.5vw,1.25rem);
+  margin-bottom: 0.75em;
+  color: #fff;
+}
+.hero-lead {
+  color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
 .hero-buttons .btn-primary,
 .hero-buttons .btn-secondary {
   text-decoration: none;
@@ -25,31 +53,28 @@
   font-weight: bold;
   margin-top: 0.5rem;
 }
-
 .btn-primary {
   background: #e26b07;
   color: #fff;
   margin-right: 1em;
 }
-
 .btn-secondary {
   border: 2px solid #fff;
-  color:  #fff;
+  color: #fff;
   background: transparent;
 }
 
+/* ===== Insight Hero Content ===== */
 .insight-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
   padding: 0 20px;
 }
-
 .insight-content h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 0.5em;
 }
-
 .insight-content p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -61,31 +86,28 @@
   background: #fff;
   padding: 5em 2em;
 }
-
 .insight-main .container {
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
+/* ===== Insight Cards ===== */
 .insight-card {
   background: #f9f9f9;
   border-radius: 12px;
-  padding: 2.5em;
+  padding: 3em 1em;
   margin-bottom: 2em;
   box-shadow: 0 6px 16px rgba(0,0,0,0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .insight-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 22px rgba(0,0,0,0.1);
 }
-
 .insight-card h2 {
   color: #e26b07;
   margin-bottom: 0.75em;
 }
-
 .insight-card p {
   color: #444;
   line-height: 1.7;
@@ -99,11 +121,109 @@
   border-radius: 12px;
   margin-top: 3em;
 }
-
 .coming-soon h3 {
   color: #1a365d;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+/* ===== News Section (Merged) ===== */
+.news-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  background: #fff;
+  padding: 4em 3em;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  max-width: 1200px;
+  margin: 3em auto;
+  overflow: hidden;
+}
+.news-text h2 {
+  font-size: 2rem;
+  color: #e26b07;
+  margin-bottom: 0.6em;
+}
+.news-text h3 {
+  color: #1a365d;
+  font-size: 1.5rem;
+  margin-bottom: 0.8em;
+  line-height: 1.4;
+}
+.news-text p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1em;
+}
+.news-buttons {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+/* === Buttons === */
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 0.8em 1.5em;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 160px;
+}
+.btn-primary {
+  background: #e26b07;
+  color: #fff;
+  border: none;
+}
+.btn-primary:hover {
+  background: #c65a05;
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  border: 2px solid #e26b07;
+  color: #e26b07;
+  background: transparent;
+}
+.btn-secondary:hover {
+  background: #e26b07;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* === Right Column: Image + Coverage === */
+.news-image {
+  text-align: center;
+}
+.news-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+.coverage {
+  margin-top: 1rem;
+  background: #f8f8f8;
+  padding: 1em 1.2em;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.coverage h4 {
+  margin: 0;
+  color: #1a365d;
+  font-size: 1rem;
+}
+.coverage p {
+  margin: 0.3em 0 0;
+  color: #444;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 /* ===== Reveal Animations ===== */
@@ -112,23 +232,58 @@
   transform: translateY(30px);
   transition: all 0.8s ease;
 }
-
 .reveal-left.active, .reveal-right.active {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+    padding: 2.5em 1.5em;
+    text-align: center;
+  }
+  .news-image {
+    order: -1; /* move image to top */
+  }
+  .news-image img {
+    max-width: 90%;
+    margin: 0 auto 1.2em;
+  }
+  .coverage {
+    margin: 0 auto 1.5em;
+  }
+  .news-text h2 {
+    font-size: 1.8rem;
+  }
+  .news-text h3 {
+    font-size: 1.3rem;
+  }
+  .news-buttons {
+    justify-content: center;
+  }
   .insight-card {
     padding: 1.5em;
   }
-
   .insight-hero {
     height: 45vh;
   }
-
   .insight-content h1 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+  }
+  .news-grid {
+    padding: 2em 1em;
+  }
+  .coverage {
+    width: 100%;
   }
 }
