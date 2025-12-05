@@ -163,3 +163,49 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.job-scroll-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.job-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.job-scroll-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.job-scroll-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.job-card {
+  min-width: 300px;
+  max-width: 900px;
+  flex: 0 0 auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  transition: transform .2s ease, box-shadow .2s ease;
+  scroll-snap-align: start;
+}
+
+.job-card li
+{
+  text-align: left;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
